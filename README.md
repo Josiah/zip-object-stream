@@ -2,6 +2,8 @@
 
 > Transform stream of arrays to stream of objects using the first row as keys for all subsiquent records
 
+[![Build Status](https://travis-ci.org/Josiah/zip-object-stream.svg)](https://travis-ci.org/Josiah/zip-object-stream)
+
 ## API
 
 ### function ([*function* **zipper(header, row)**])
