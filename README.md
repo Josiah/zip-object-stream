@@ -1,3 +1,32 @@
+# `zip-object-stream`
+
+> Transform stream of arrays to stream of objects using the first row as keys for all subsiquent records
+
+## API
+
+### `zip-object-stream`([*function* **zipper(header, row)**])
+
+#### *function* zipper(*array* **header**, *array* **row**)
+
+This function is called for each set of data emitted after the first. The result is
+passed onwards through the stream.
+
+## Example usage
+
+```js
+var csvParse = require('csv-parse')
+var zipObjectStream = require('zip-object-stream')
+var fs = require('fs')
+
+fs.createReadStream('superdata.csv')
+  .pipe(csvParse())
+    // provides arrays -> ['one', 'two', 'three'], ['1', '2', '3'], ['a', 'b', 'c']
+  .pipe(zipObjectStream())
+    // provides objects -> {one: '1', two: '2', three: '3'}, {one: 'a', two: 'b', three: 'c'}
+```
+
+# Licence
+
 The MIT License (MIT)
 
 Copyright (c) 2015 Josiah Truasheim
