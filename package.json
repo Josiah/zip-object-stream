@@ -1,0 +1,24 @@
+{
+  "name": "zip-object-stream",
+  "description": "Transform stream of arrays to stream of objects using the first row as keys for all subsiquent records",
+  "version": "0.0.0",
+  "author": "Josiah Truasheim <josiah@rapidapps.io>",
+  "keywords": [
+    "zip",
+    "object",
+    "zip-object",
+    "stream"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "covert": "^1.1.0",
+    "tape": "^4.2.2"
+  },
+  "dependencies": {
+    "map-stream": "0.0.6",
+    "zip-object": "^0.1.0"
+  },
+  "scripts": {
+    "test": "covert tests/*.js"
+  }
+}
