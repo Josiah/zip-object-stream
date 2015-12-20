@@ -4,12 +4,13 @@
 
 ## API
 
-### `zip-object-stream`([*function* **zipper(header, row)**])
+### function ([*function* **zipper(header, row)**])
 
-#### *function* zipper(*array* **header**, *array* **row**)
+#### Params
 
-This function is called for each set of data emitted after the first. The result is
-passed onwards through the stream.
+1. zipper(*array* **header**, *array* **row**) (optional)
+
+  - This function is called for each set of data emitted after the first. The result is passed onwards through the stream.
 
 ## Example usage
 
